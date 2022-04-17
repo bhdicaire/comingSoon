@@ -1,0 +1,133 @@
+baseURL: http://dicaire.com
+title: BHDicaire.com
+
+author:
+  name: Benoît H. Dicaire
+  email: bh@dicaire.com
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+enableEmoji: true
+enableGitInfo: true
+relativeURLs: true
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+
+  home:
+    - HTML
+
+params:
+  author: Benoît H. Dicaire
+  description: "yet another developer's journey"
+  displayFullLangName: true
+  DateFormat: :date_medium
+
+  assets:
+    favicon: /favicon.ico
+    disableHLJS: true
+
+  socialIcons:
+    - name: github
+      url: 'https://github.com/bhdicaire'
+    - name: twitter
+      url: 'https://twitter.com/bhdicaire'
+    - name: linkedin
+      url: 'https://www.linkedin.com/in/bhdicaire'
+
+  analytics:
+
+#    google:
+#      SiteVerificationTag: eYTteUmuhinj42RTTPlY1SrZXHkBP_ibiGhlM9GHAMk
+#
+#    bing:
+#      SiteVerificationTag: BC3E4C5EA9030413F989C6C96EAEE97C
+#
+#    yandex:
+#      SiteVerificationTag: 72e5d19a7266b9fa
+
+markup:
+
+  goldmark:
+
+    renderer:
+      unsafe: true
+
+  highlight:
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: false
+    noClasses: false
+    pygmentsUseClasses: true
+    tabWidth: 2
+
+      
+languages:
+
+  en:
+    languageName: English
+    copyright: See this site's source code [here](https://github.com/bhdicaire/bhdicaire.github.io), licensed under GPLv3.
+
+    label:
+      text: "BH Dicaire"
+      icon: /bhdicaire-logo.png
+      iconHeight: 30
+
+  fr:
+    languageName: Français
+    copyright: Il codice sorgente di questo sito è disponibile [qui](https://github.com/binick/binick.github.io), licenziato sotto GPLv3.
+
+    label:
+      text: "BH Dicaire"
+      icon: /bhdicaire-logo.png
+      iconHeight: 30
+
+    params:
+
+      editPost:
+        URL: https://github.com/bhdicaire/bhdicaire-com/tree/main/content
+        Text: ✍️ Suggerisci modifiche
+        appendFilePath: true
+
+      changelog:
+        URL: https://github.com/bhdicaire/bhdicaire-com/commits/main/content
+        Text: 🗒️ Changelog
+        appendFilePath: true
+
+    homeInfoParams:
+      Title: "... verso il cloud"
+
+    menu:
+
+      main:
+        - name: À propos
+          url: /about/
+          weight: 3
+        - name: Archives
+          url: /archives/
+          weight: 10
+        - name: Recherche
+          url: /search/
+          weight: 5
+
+        # - name: Casi di studio
+        #   url: /case-studies/
+        #   weight: 10
+
+frontmatter:
+  lastmod:
+  - lastmod
+  - :git
+  - date
+  - publishDate
